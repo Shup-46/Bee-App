@@ -19,3 +19,24 @@ buildscript {
         classpath("com.facebook.react:react-native-gradle-plugin")
     }
 }
+
+buildscript {
+    // ...
+}
+
+
+allprojects {
+    repositories {
+       exclusiveContent {
+           filter {
+               includeGroup "com.facebook.react"
+           }
+           forRepository {
+               maven {
+                   url "$rootDir/../node_modules/react-native/android"
+               }
+           }
+       }
+        // ...
+    }
+}
