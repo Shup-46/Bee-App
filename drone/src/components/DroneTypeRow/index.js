@@ -6,10 +6,10 @@ const DroneTypeRow = (props) => {
     const {type} = props;
     const getImage = () =>{
 
-      if (type.type== 'waste(large)'){
+      if (type.type=== 'waste(large)'){
         return require('../../assets/images/waste(large).png');
       }
-      if (type.type== 'waste(small)'){
+      if (type.type=== 'waste(small)'){
         return require('../../assets/images/waste(small).png');
       }
       
@@ -19,7 +19,7 @@ const DroneTypeRow = (props) => {
     return (
 
     <View style={styles.container}>
-
+ 
       <Image style ={styles.image} 
       source={getImage()}/>
      

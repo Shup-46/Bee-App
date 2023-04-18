@@ -1,0 +1,15 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-drone-cli-151329-authRole",
+      "UnauthRoleArn": "arn:aws:iam::900676112166:role/amplify-drone-cli-151329-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::900676112166:role/amplify-drone-cli-151329-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-drone-cli-151329-deployment",
+      "UnauthRoleName": "amplify-drone-cli-151329-unauthRole",
+      "StackName": "amplify-drone-cli-151329",
+      "StackId": "arn:aws:cloudformation:us-east-1:900676112166:stack/amplify-drone-cli-151329/fca686b0-dc36-11ed-955f-0e89cb2d4977",
+      "AmplifyAppId": "d3tx2ifzuct3be"
+    }
+  }
+}

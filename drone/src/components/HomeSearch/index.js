@@ -3,6 +3,7 @@ import {View, Text} from 'react-native';
 import AntDesign from "react-native-vector-icons/AntDesign";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import Entypo from "react-native-vector-icons/Entypo";
+import {useNavigation} from '@react-navigation/native'
 import styles from './styles.js';
 
 const HomeSearch = (props) => {
@@ -10,14 +11,15 @@ const HomeSearch = (props) => {
     return (
     <View>
      {/*INPUT BOX */}
-     <View style = {styles.enterBox}>
-        <Text style ={styles.enterText}>Where to?</Text>
+     <Pressable onPress={goToSearch} style={styles.inputBox}>
+        <Text style={styles.inputText}>Where To?</Text>
+
         <View style={styles.timeContainer}>
-           <AntDesign name ={"clockcircle"} size={16} color={"black"}/>
-           <Text>Now</Text>
-           <MaterialIcons name={"keyboard-arrow-down"} size={16}/>
+          <AntDesign name={'clockcircle'} size={16} color={'#535353'} />
+          <Text>Now</Text>
+          <MaterialIcons name={'keyboard-arrow-down'} size={16} />
         </View>
-     </View>
+      </Pressable>
 
 
     {/*Previous destination*/}

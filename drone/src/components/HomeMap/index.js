@@ -15,7 +15,7 @@ const HomeMap = (props) => {
           return require('../../assets/images/Drone2.png');
         }
         
-          return require('../../assets/images/Drone3.png');
+          return require('../../assets/images/Drone1.png');
   
       };    
 
@@ -24,6 +24,7 @@ const HomeMap = (props) => {
       <MapView
       style={{width: '100%', height: '100%'}}
       provider={PROVIDER_GOOGLE}
+      showsUserLocation ={true}
       initialRegion={{
         latitude: 28.450627,
         longitude: -16.263045,
@@ -36,21 +37,20 @@ const HomeMap = (props) => {
             coordinate={{ latitude : drone.lattitude , longitude : drone.longitude }}
             >
             <Image
-                style={{width: 70, height: 70, resizeMode: "contain"}}
-                source={getImage(drone.type)}
-            />
-
-            </Marker>
-            
-        ))}
-        
-             
-           
-             
-        </MapView>
-      
-    );
-
+            style={{
+              width: 70,
+              height: 70,
+              resizeMode: 'contain',
+              transform: [{
+                rotate: `${drone.heading}deg`
+              }]
+            }}
+            source={getImage(drone.type)}
+          />
+        </Marker>
+      ))}
+    </MapView>
+  );
 };
 
 export default HomeMap;
